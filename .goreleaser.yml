@@ -37,16 +37,17 @@ source:
 checksum:
   name_template: "doctl-{{ .Version }}-checksums.sha256"
 
-dockers:
-- dockerfile: Dockerfile.goreleaser
-  image_templates:
-  - "digitalocean/doctl:latest"
-  - "digitalocean/doctl:{{ .Major }}-latest"
-  - "digitalocean/doctl:{{ .Version }}"
+#dockers:
+#- dockerfile: Dockerfile.goreleaser
+#  image_templates:
+#  - "digitalocean/doctl:latest"
+#  - "digitalocean/doctl:{{ .Major }}-latest"
+#  - "digitalocean/doctl:{{ .Version }}"
 
+# Fork for Pre-release testing
 release:
   github:
-    owner: digitalocean
+    owner: trinitronx
     name: doctl
 
 changelog:

@@ -8,7 +8,8 @@ if [[ ! -x $(command -v goreleaser) ]] ; then
 fi
 
 echo "generating changelog"
-release_notes="$(make _changelog)"
+#release_notes="$(make _changelog)"
+release_notes=/tmp/doctl-CHANGELOG-oTPy0m
 
 goreleaser --rm-dist --release-notes="${release_notes}"
 
